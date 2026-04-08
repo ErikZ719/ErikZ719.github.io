@@ -50,7 +50,39 @@
       padding: 28px 0 20px;
       margin-bottom: 36px;
     }
+.news-box {
+  max-height: 220px;
+  overflow-y: auto;
+  padding-right: 8px;
+  border: 1px solid var(--line);
+  background: #080808;
+}
 
+.news-list {
+  margin: 0;
+  padding: 14px 20px 14px 32px;
+}
+
+.news-list li {
+  margin-bottom: 10px;
+}
+
+.news-box::-webkit-scrollbar {
+  width: 8px;
+}
+
+.news-box::-webkit-scrollbar-track {
+  background: #0b0b0b;
+}
+
+.news-box::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 8px;
+}
+
+.news-box::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
     .header-main {
       display: flex;
       justify-content: space-between;
@@ -68,6 +100,84 @@
       flex-shrink: 0;
     }
 
+      .pub-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.pub-item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.pub-image {
+  width: 180px;
+  flex-shrink: 0;
+}
+
+.pub-image img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+  border: 1px solid var(--line);
+  background: #111;
+}
+
+.pub-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.pub-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+.pub-authors {
+  color: #dddddd;
+  margin-bottom: 4px;
+  font-size: 0.97rem;
+}
+
+.pub-venue {
+  color: var(--muted);
+  margin-bottom: 8px;
+  font-size: 0.96rem;
+}
+
+.pub-links {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.pub-links a {
+  margin-right: 12px;
+}
+
+.pub-desc {
+  margin: 0;
+  color: #cfcfcf;
+  font-size: 0.96rem;
+}
+
+@media (max-width: 700px) {
+  .pub-item {
+    flex-direction: column;
+  }
+
+  .pub-image {
+    width: 100%;
+    max-width: 260px;
+  }
+}
+      
     .avatar {
       width: 110px;
       height: 110px;
@@ -198,60 +308,97 @@
     <section id="about">
       <h2>About Me</h2>
       <p>
-        I am Erik Li, a researcher interested in multimodal large language models,
-        explainable AI, and reasoning. My research focuses on understanding how
-        large models process visual and textual information, how they reason,
-        and how we can improve their transparency and reliability.
+        I am a Ph.D. student at the Institute of Automation, Chinese Academy of Sciences, advised by <a href="https://people.ucas.edu.cn/~xuyaozhang?language=en" target="_blank">Prof. Xu-Yao Zhang</a>. Previously, I was a research intern at Shanghai Jiao Tong University, where I had the privilege of collaborating with and learning from <a href="https://zhangbaijin.github.io/" target="_blank">Xiaofeng Zhang</a>. My research focuses on explainable AI and multimodal large language models (MLLMs).
       </p>
       <p>
-        I am particularly interested in interpretability, attention analysis,
-        hallucination mitigation, and trustworthy multimodal systems.
-      </p>
-      <p>
-        You can find my code and projects on
-        <a href="https://github.com/ErikZ719" target="_blank">GitHub</a>.
+        My current interests lie in multimodal reasoning and embodied intelligence (VLA). Please feel free to reach out if you are interested in related topics.
       </p>
     </section>
 
     <section id="news">
       <h2>News</h2>
-      <ul>
-        <li><strong>Apr 2026</strong> — Personal academic homepage launched.</li>
-        <li><strong>Mar 2026</strong> — Ongoing research on multimodal reasoning and model interpretability.</li>
-        <li><strong>Jan 2026</strong> — Continued work on explainable AI and trustworthy generation.</li>
+  <div class="news-box">
+    <ul class="news-list">
+        <li><strong>2026.4</strong> — We have 2 papers accepted to ACL 2026. </li>
+        <li><strong>2026.2</strong> — We have 1 paper accepted to CVPR 2026. </li>
+        <li><strong>2026.1</strong> — We have 1 paper accepted to ICRA 2026. </li>
+        <li><strong>2026.1</strong> — We have 2 paper accepted to ICLR 2026. </li>
+        <li><strong>2025.10</strong> — We have 1 paper accepted to ACM MM 2025. </li>
       </ul>
+  </div>
     </section>
 
-    <section id="publications">
-      <h2>Publications</h2>
-      <ul>
-        <li>
-          <strong>Author, A.</strong>, Erik Li, Author, B.
-          “Your Paper Title Here.”
-          <em>Conference / Journal</em>, 2026.
-        </li>
-        <li>
-          Erik Li, Author, C.
-          “Another Paper Title Here.”
-          <em>Conference / Journal</em>, 2025.
-        </li>
-        <li>
-          Add your full publication list here, or replace this section with selected papers only.
-        </li>
-      </ul>
-    </section>
+<section id="publications">
+  <h2>Publications</h2>
+
+  <div class="pub-list">
+
+    <div class="pub-item">
+      <div class="pub-image">
+        <img src="images/EDAR.png" alt="EDAR paper thumbnail">
+      </div>
+      <div class="pub-content">
+        <div class="pub-title">Fixing Semantic Blind Spots in Anchor Tokens of dMLLMs</div>
+        <div class="pub-authors">
+          Ruixuan Xu, Jiexi Xu, <strong>Qiyan Zhao</strong>, Xiaofeng Zhang
+        </div>
+        <div class="pub-venue">
+          <em>ACL 2026 Findings</em>
+        </div>
+        <div class="pub-links">
+          <a href="https://2026.aclweb.org/" target="_blank">[Paper]</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-image">
+        <img src="images/tokenpenalty.png" alt="TokenPenalty paper thumbnail">
+      </div>
+      <div class="pub-content">
+        <div class="pub-title">TokenPenalty: Alleviating Attention Sinks and Positional Decay in LVLMs</div>
+        <div class="pub-authors">
+          Xiaofeng Zhang, Yuanchao Zhu, <strong>Qiyan Zhao</strong>, Xiaosong Yuan, Jiawei Cao, Xuhang Chen
+        </div>
+        <div class="pub-venue">
+          <em>ACL 2026 Findings</em>
+        </div>
+        <div class="pub-links">
+          <a href="https://2026.aclweb.org/" target="_blank">[Paper]</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-image">
+        <img src="images/cvpr.jpg" alt="SoPE paper thumbnail">
+      </div>
+      <div class="pub-content">
+        <div class="pub-title">SoPE: Spherical Coordinate-Based Positional Embedding for Enhancing Spatial Perception of 3D LVLMs</div>
+        <div class="pub-authors">
+          Koon-Ting Yip, <strong>Qiyan Zhao</strong>, Wenhao Yu, Liangyu Yuan, Mingkai Li, Xiaofeng Zhang, Jianmin Ji, Yanyong Zhang, Qing Jiang, Ka-Veng Yuen
+        </div>
+        <div class="pub-venue">
+          <em>CVPR 2026</em>
+        </div>
+        <div class="pub-links">
+          <a href="https://arxiv.org/abs/2602.22716" target="_blank">[Paper]</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
 
     <section id="services">
       <h2>Services</h2>
       <ul>
-        <li>Reviewer for conferences and journals in AI, computer vision, and machine learning.</li>
-        <li>Research collaboration on multimodal reasoning, explainability, and trustworthy AI.</li>
-        <li>Open-source contributions and academic community support.</li>
+        <li>Invited Reviewer for: ICML, NeurIPS, CVPR, ICLR, ACM MM, ECCV</li>
       </ul>
     </section>
 
     <footer>
-      © 2026 Erik Li
+      © 2026 ErikZ
     </footer>
   </div>
 </body>
