@@ -51,12 +51,31 @@
       margin-bottom: 36px;
     }
 
-    .top {
+    .header-main {
       display: flex;
       justify-content: space-between;
-      align-items: flex-end;
-      gap: 20px;
+      align-items: center;
+      gap: 24px;
       flex-wrap: wrap;
+    }
+
+    .header-left {
+      flex: 1;
+      min-width: 260px;
+    }
+
+    .header-right {
+      flex-shrink: 0;
+    }
+
+    .avatar {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid var(--line);
+      display: block;
+      background: #111;
     }
 
     h1 {
@@ -72,11 +91,18 @@
       font-size: 1rem;
     }
 
+    .meta {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
     nav {
       display: flex;
       gap: 18px;
       flex-wrap: wrap;
       font-size: 0.98rem;
+      margin-top: 20px;
     }
 
     nav a {
@@ -115,12 +141,6 @@
       color: #dddddd;
     }
 
-    .meta {
-      margin-top: 12px;
-      color: var(--muted);
-      font-size: 0.96rem;
-    }
-
     footer {
       border-top: 1px solid var(--line);
       padding: 24px 0 40px;
@@ -129,6 +149,15 @@
     }
 
     @media (max-width: 640px) {
+      .header-main {
+        align-items: flex-start;
+      }
+
+      .avatar {
+        width: 88px;
+        height: 88px;
+      }
+
       h1 {
         font-size: 1.8rem;
       }
@@ -142,20 +171,25 @@
 <body>
   <div class="container">
     <header>
-      <div class="top">
-        <div>
+      <div class="header-main">
+        <div class="header-left">
           <h1>Erik Li</h1>
           <div class="subtitle">Researcher in Multimodal AI, Explainability, and Reasoning</div>
           <div class="meta">
             GitHub: <a href="https://github.com/ErikZ719" target="_blank">ErikZ719</a>
           </div>
+
+          <nav>
+            <a href="#about">About Me</a>
+            <a href="#news">News</a>
+            <a href="#publications">Publications</a>
+            <a href="#services">Services</a>
+          </nav>
         </div>
-        <nav>
-          <a href="#about">About Me</a>
-          <a href="#news">News</a>
-          <a href="#publications">Publications</a>
-          <a href="#services">Services</a>
-        </nav>
+
+        <div class="header-right">
+          <img src="images/touxiang.jpg" alt="Erik Li avatar" class="avatar">
+        </div>
       </div>
     </header>
 
@@ -214,6 +248,9 @@
       </ul>
     </section>
 
+    <footer>
+      © 2026 Erik Li
+    </footer>
   </div>
 </body>
 </html>
