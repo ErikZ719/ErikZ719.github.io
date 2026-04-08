@@ -108,10 +108,9 @@
 
 .pub-item {
   display: flex;
-  gap: 20px;
   align-items: flex-start;
-  padding: 18px 0;
-  border-bottom: 1px solid var(--line);
+  gap: 22px;
+  padding: 6px 0;
 }
 
 .pub-image {
@@ -121,9 +120,11 @@
 
 .pub-image img {
   width: 100%;
-  border-radius: 8px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
   display: block;
   border: 1px solid var(--line);
+  border-radius: 8px;
   background: #111;
 }
 
@@ -133,38 +134,28 @@
 }
 
 .pub-title {
-  font-size: 1.1rem;
+  font-size: 1.08rem;
   font-weight: 600;
   color: var(--text);
-  margin-bottom: 6px;
   line-height: 1.5;
+  margin-bottom: 6px;
 }
 
 .pub-authors {
+  font-size: 0.94rem;
   color: #dddddd;
+  line-height: 1.6;
   margin-bottom: 4px;
-  font-size: 0.97rem;
 }
 
 .pub-venue {
-  color: var(--muted);
-  margin-bottom: 8px;
-  font-size: 0.96rem;
-}
-
-.pub-links {
-  margin-bottom: 10px;
   font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.6;
 }
 
-.pub-links a {
-  margin-right: 12px;
-}
-
-.pub-desc {
-  margin: 0;
-  color: #cfcfcf;
-  font-size: 0.96rem;
+.pub-venue a {
+  margin-left: 10px;
 }
 
 @media (max-width: 700px) {
@@ -322,7 +313,7 @@
         <li><strong>2026.4</strong> — We have 2 papers accepted to ACL 2026. </li>
         <li><strong>2026.2</strong> — We have 1 paper accepted to CVPR 2026. </li>
         <li><strong>2026.1</strong> — We have 1 paper accepted to ICRA 2026. </li>
-        <li><strong>2026.1</strong> — We have 2 paper accepted to ICLR 2026. </li>
+        <li><strong>2026.1</strong> — We have 2 paper including 1 oral accepted to ICLR 2026. </li>
         <li><strong>2025.10</strong> — We have 1 paper accepted to ACM MM 2025. </li>
       </ul>
   </div>
@@ -333,6 +324,59 @@
 
   <div class="pub-list">
 
+      
+
+      <div class="pub-item">
+      <div class="pub-image">
+        <img src="images/cota.png" alt="C2RoPE paper thumbnail">
+      </div>
+      <div class="pub-content">
+        <div class="pub-title">Context Tokens are Anchors: Understanding the Repeat Curse in dMLLMs from an Information Flow Perspective</div>
+        <div class="pub-authors">
+          <strong>Qiyan Zhao</strong>, Xiaofeng Zhang, Shuochen Chang, Qianyu Chen, Xiaosong Yuan, Xuhang Chen, Luoqi Liu, Jiajun Zhang, Xu-Yao Zhang, Da-Han Wang
+        </div>
+        <div class="pub-venue">
+          <em>ICLR 2026</em>
+          <a href="https://openreview.net/forum?id=mOz9jVYxsD" target="_blank">[Paper]</a>
+          <a href="https://github.com/zhangbaijin/LVLMs-Saliency" target="_blank">[Code]</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-image">
+        <img src="images/mca.png" alt="C2RoPE paper thumbnail">
+      </div>
+      <div class="pub-content">
+        <div class="pub-title">MCA-LLaVA: Manhattan Causal Attention for Reducing Hallucination in Large Vision-Language Models</div>
+        <div class="pub-authors">
+        <strong>Qiyan Zhao</strong>, Xiaofeng Zhang, Yiheng Li, Yun Xing, Xiaosong Yuan, Feilong Tang, Sinan Fan, Xuhang Chen, Da-Han Wang, Xu-Yao Zhang
+        </div>
+        <div class="pub-venue">
+          <em>ACM MM 2025</em>
+          <a href="https://dl.acm.org/doi/pdf/10.1145/3746027.3755271" target="_blank">[Paper]</a>
+          <a href="https://github.com/ErikZ719/MCA-LLaVA" target="_blank">[Code]</a>
+        </div>
+      </div>
+    </div>
+
+      <div class="pub-item">
+      <div class="pub-image">
+        <img src="images/iclr.png" alt="C2RoPE paper thumbnail">
+      </div>
+      <div class="pub-content">
+        <div class="pub-title">Hallucination Begins Where Saliency Drops</div>
+        <div class="pub-authors">
+          Xiaofeng Zhang, Yuanchao Zhu, Chaochen Gu, Xiaosong Yuan, <strong>Qiyan Zhao</strong>, Jiawei Cao, Feilong Tang, Sinan Fan, Yaomin Shen, Chen Shen, Hao Tang
+        </div>
+        <div class="pub-venue">
+          <em>ICLR 2026 Oral</em>
+          <a href="https://arxiv.org/abs/2601.20279" target="_blank">[Paper]</a>
+          <a href="https://github.com/zhangbaijin/LVLMs-Saliency" target="_blank">[Code]</a>
+        </div>
+      </div>
+    </div>
+      
     <div class="pub-item">
       <div class="pub-image">
         <img src="images/EDAR.png" alt="EDAR paper thumbnail">
@@ -344,8 +388,6 @@
         </div>
         <div class="pub-venue">
           <em>ACL 2026 Findings</em>
-        </div>
-        <div class="pub-links">
           <a href="https://2026.aclweb.org/" target="_blank">[Paper]</a>
         </div>
       </div>
@@ -362,8 +404,6 @@
         </div>
         <div class="pub-venue">
           <em>ACL 2026 Findings</em>
-        </div>
-        <div class="pub-links">
           <a href="https://2026.aclweb.org/" target="_blank">[Paper]</a>
         </div>
       </div>
@@ -380,13 +420,28 @@
         </div>
         <div class="pub-venue">
           <em>CVPR 2026</em>
-        </div>
-        <div class="pub-links">
           <a href="https://arxiv.org/abs/2602.22716" target="_blank">[Paper]</a>
         </div>
       </div>
     </div>
 
+    <div class="pub-item">
+      <div class="pub-image">
+        <img src="images/icra.png" alt="C2RoPE paper thumbnail">
+      </div>
+      <div class="pub-content">
+        <div class="pub-title">C<sup>2</sup>ROPE: Causal Continuous Rotary Positional Encoding for 3D Large Multimodal Models Reasoning</div>
+        <div class="pub-authors">
+          Koon-Ting Yip, <strong>Qiyan Zhao</strong>, Wenhao Yu, Xiaofeng Zhang, Jianming Ji, Yanyong Zhang, Ka-Veng Yuen
+        </div>
+        <div class="pub-venue">
+          <em>ICRA 2026</em>
+          <a href="https://arxiv.org/abs/2602.10551" target="_blank">[Paper]</a>
+          <a href="https://github.com/KarnaYip/C2RoPE" target="_blank">[Code]</a>
+        </div>
+      </div>
+    </div>
+      
   </div>
 </section>
 
