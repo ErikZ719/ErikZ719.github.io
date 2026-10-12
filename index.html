@@ -1,555 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Qiyan Zhao</title>
-  <style>
-    :root {
-      --bg: #050505;
-      --panel: #0d0d0d;
-      --line: #222;
-      --text: #f3f3f3;
-      --muted: #aaaaaa;
-      --accent: #cfcfcf;
-      --max-width: 900px;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .container {
-      width: min(var(--max-width), calc(100% - 32px));
-      margin: 0 auto;
-    }
-
-    header {
-      border-bottom: 1px solid var(--line);
-      padding: 28px 0 20px;
-      margin-bottom: 36px;
-    }
-.news-box {
-  max-height: 220px;
-  overflow-y: auto;
-  padding-right: 8px;
-  border: 1px solid var(--line);
-  background: #080808;
-}
-
-.news-list {
-  margin: 0;
-  padding: 14px 20px 14px 32px;
-}
-
-.news-list li {
-  margin-bottom: 10px;
-}
-
-.news-box::-webkit-scrollbar {
-  width: 8px;
-}
-
-.news-box::-webkit-scrollbar-track {
-  background: #0b0b0b;
-}
-
-.news-box::-webkit-scrollbar-thumb {
-  background: #333;
-  border-radius: 8px;
-}
-
-.news-box::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-    .header-main {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 24px;
-      flex-wrap: wrap;
-    }
-
-    .header-left {
-      flex: 1;
-      min-width: 260px;
-    }
-
-    .header-right {
-      flex-shrink: 0;
-    }
-
-      .pub-list {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.pub-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 22px;
-  padding: 6px 0;
-}
-
-.pub-image {
-  width: 180px;
-  flex-shrink: 0;
-}
-
-.pub-image img {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  display: block;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: #111;
-}
-
-.pub-content {
-  flex: 1;
-  min-width: 0;
-}
-
-.pub-title {
-  font-size: 1.08rem;
-  font-weight: 600;
-  color: var(--text);
-  line-height: 1.5;
-  margin-bottom: 6px;
-}
-
-.pub-authors {
-  font-size: 0.94rem;
-  color: #dddddd;
-  line-height: 1.6;
-  margin-bottom: 4px;
-}
-
-.pub-venue {
-  font-size: 0.95rem;
-  color: var(--muted);
-  line-height: 1.6;
-}
-
-.pub-venue a {
-  margin-left: 10px;
-}
-
-@media (max-width: 700px) {
-  .pub-item {
-    flex-direction: column;
-  }
-
-  .pub-image {
-    width: 100%;
-    max-width: 260px;
-  }
-}
-      
-    .avatar {
-      width: 110px;
-      height: 110px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 1px solid var(--line);
-      display: block;
-      background: #111;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: 2.2rem;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-    }
-
-    .subtitle {
-      color: var(--muted);
-      margin-top: 6px;
-      font-size: 1rem;
-    }
-
-    .meta {
-      margin-top: 12px;
-      color: var(--muted);
-      font-size: 0.96rem;
-    }
-
-    nav {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-      font-size: 0.98rem;
-      margin-top: 20px;
-    }
-
-    nav a {
-      color: var(--muted);
-    }
-
-    nav a:hover {
-      color: var(--text);
-      text-decoration: none;
-    }
-
-    section {
-      margin-bottom: 52px;
-    }
-
-    h2 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin: 0 0 18px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid var(--line);
-    }
-
-    p {
-      margin: 0 0 14px;
-      color: #dddddd;
-    }
-
-    ul {
-      margin: 0;
-      padding-left: 20px;
-    }
-
-    li {
-      margin-bottom: 12px;
-      color: #dddddd;
-    }
-
-    footer {
-      border-top: 1px solid var(--line);
-      padding: 24px 0 40px;
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
-    @media (max-width: 640px) {
-      .header-main {
-        align-items: flex-start;
-      }
-
-      .avatar {
-        width: 88px;
-        height: 88px;
-      }
-
-      h1 {
-        font-size: 1.8rem;
-      }
-
-      h2 {
-        font-size: 1.3rem;
-      }
-    }
-  </style>
+  <title>Qiyan Zhao — Reliable AI, from Mechanism to Embodiment</title>
+  <meta name="author" content="Qiyan Zhao">
+  <meta name="description" content="Qiyan Zhao is a Ph.D. student at the Institute of Automation, Chinese Academy of Sciences, working on interpretable and reliable multimodal models, self-evolving agents, and embodied intelligence.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Qiyan Zhao — Reliable AI, from Mechanism to Embodiment">
+  <meta property="og:description" content="Ph.D. student at CASIA working on interpretable and reliable multimodal models, self-evolving agents, and embodied intelligence.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="assets/style.css">
+  <script>(function(){var t;try{t=localStorage.getItem('theme')}catch(e){}if(t!=='light'&&t!=='dark'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}document.documentElement.setAttribute('data-theme',t)})();</script>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="header-main">
-        <div class="header-left">
-          <h1>Qiyan Zhao</h1>
-<div class="subtitle">Institute of Automation, Chinese Academy of Sciences</div>
-         <div class="meta">
-  <a href="https://github.com/ErikZ719" target="_blank">GitHub</a>
-  &nbsp;|&nbsp;
-  <a href="https://scholar.google.co.jp/citations?user=lI7U-X8AAAAJ&hl=zh-CN" target="_blank">Google Scholar</a>
-&nbsp;|&nbsp;
-<a href="mailto:qiyanzhao618@gmail.com">Email: </a> <a href="mailto:qiyanzhao618@gmail.com">qiyanzhao618@gmail.com</a>
+<div class="shell">
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+      <img class="portrait" src="images/touxiang.jpg" alt="Portrait of Qiyan Zhao" width="148" height="148">
+      <div class="id">
+        <h1>Qiyan Zhao</h1>
+        <p class="role">Ph.D. Student</p>
+        <p class="affil">Institute of Automation,<br>Chinese Academy of Sciences</p>
+      </div>
+      <nav class="side-nav" aria-label="Main">
+        <a href="index.html" aria-current="page"><span>01</span>Home</a>
+        <a href="research.html"><span>02</span>Research</a>
+        <a href="publications.html"><span>03</span>Publications</a>
+        <a href="news.html"><span>04</span>News</a>
+      </nav>
+      <div class="side-links">
+        <a class="icon-btn" href="mailto:qiyanzhao618@gmail.com" aria-label="Email" title="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></a>
+        <a class="icon-btn" href="https://scholar.google.com/citations?user=lI7U-X8AAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></a>
+        <a class="icon-btn" href="https://github.com/ErikZ719" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg></a>
+        <button class="icon-btn theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode"><svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg><svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></button>
+      </div>
+      <p class="email-text">qiyanzhao618 [at] gmail.com</p>
+    </div>
+  </aside>
+
+  <main>
+    <div class="col stack rise">
+
+      <section>
+        <p class="kicker">About</p>
+        <h2 class="headline">Reliable AI, from <span class="mark">mechanism</span> to <span class="mark">embodiment</span></h2>
+        <div class="bio">
+          <p>I am a Ph.D. student at the <a class="link" href="http://english.ia.cas.cn/" target="_blank" rel="noopener">Institute of Automation, Chinese Academy of Sciences</a>, in the State Key Laboratory of Multimodal Artificial Intelligence Systems, advised by <a class="link" href="https://people.ucas.edu.cn/~xuyaozhang?language=en" target="_blank" rel="noopener">Prof. Xu-Yao Zhang</a>.</p>
+          <p>My research asks <b>why large multimodal models and agents fail, and how to make them reliable</b>. I open up their internal computation (information flow, attention, and positional structure) to find where hallucination, repetition, and spatial confusion begin. I then turn these mechanistic insights into principled fixes at both <b>training</b> and <b>inference</b> time. I carry the same reliability goals into self-evolving agents and embodied systems, from 3D spatial perception to vision–language–action (VLA) and world-action models.</p>
+        </div>
+        <ul class="chips" aria-label="Research topics">
+          <li>Mechanistic Interpretability</li>
+          <li>Multimodal LLMs</li>
+          <li>Diffusion MLLMs</li>
+          <li>Self-Evolving Agents</li>
+          <li>Embodied AI</li>
+        </ul>
+      </section>
+
+      <section>
+        <div class="sec-head">
+          <h3><span class="idx">01</span>News</h3>
+          <a class="more" href="news.html">All news →</a>
+        </div>
+        <ol class="timeline">
+          <li><time>Aug 2026</time><p>Context-Aware Cluster Decoding, on semantic anchors for coherent diffusion MLLMs, is accepted to the <b>EMNLP 2026</b> main conference.</p></li>
+          <li><time>Aug 2026</time><p>New preprint: when do the skills of self-evolving agents actually help? <a class="link" href="https://arxiv.org/abs/2608.22610" target="_blank" rel="noopener">Coalition-Aware Skill Reliability</a> is on arXiv.</p></li>
+          <li><time>Jun 2026</time><p>Embodied chain-of-thought via interleaved reasoning is accepted to <b>IROS 2026</b> as an Oral.</p></li>
+          <li><time>Apr 2026</time><p>Two papers, on attention sinks in LVLMs and on anchor tokens in diffusion MLLMs, are accepted to <b>Findings of ACL 2026</b>.</p></li>
+          <li><time>Apr 2026</time><p>One paper on efficient vision–language models is accepted to <b>ICIC 2026</b> as an Oral.</p></li>
+        </ol>
+      </section>
+
+      <section>
+        <div class="sec-head">
+          <h3><span class="idx">02</span>Research at a Glance</h3>
+          <a class="more" href="research.html">Overview →</a>
+        </div>
+        <div class="glance">
+          <article class="g-card">
+            <div class="g-icon t1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></div>
+            <p class="g-verb">Diagnose</p>
+            <h4>Interpretability</h4>
+            <p>Trace information flow inside multimodal models to find where hallucination, repetition, and positional bias begin.</p>
+          </article>
+          <article class="g-card">
+            <div class="g-icon t2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></div>
+            <p class="g-verb">Repair</p>
+            <h4>Reliability</h4>
+            <p>Fix failures by design: positional encodings and attention structure in training, decoding and token-level intervention at inference.</p>
+          </article>
+          <article class="g-card">
+            <div class="g-icon t3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg></div>
+            <p class="g-verb">Deploy</p>
+            <h4>Agency</h4>
+            <p>Carry reliability into self-evolving agents and embodied systems that perceive, reason, and act.</p>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <div class="sec-head">
+          <h3><span class="idx">03</span>Selected Papers</h3>
+          <a class="more" href="publications.html">All papers →</a>
+        </div>
+        <ul class="pub-mini">
+          <li>
+            <p class="t">Context Tokens are Anchors: Understanding the Repeat Curse in dMLLMs from an Information Flow Perspective</p>
+            <p class="a"><b>Qiyan Zhao*</b>, Xiaofeng Zhang*, et al.</p>
+            <div class="m"><span class="pill">ICLR 2026</span><span class="mini-links"><a href="https://openreview.net/forum?id=mOz9jVYxsD" target="_blank" rel="noopener">Paper</a><a href="https://github.com/ErikZ719/CoTA" target="_blank" rel="noopener">Code</a></span></div>
+          </li>
+          <li>
+            <p class="t">Hallucination Begins Where Saliency Drops</p>
+            <p class="a">Xiaofeng Zhang, …, <b>Qiyan Zhao</b>, et al.</p>
+            <div class="m"><span class="pill">ICLR 2026</span><span class="pill pill-solid">Oral</span><span class="mini-links"><a href="https://arxiv.org/abs/2601.20279" target="_blank" rel="noopener">Paper</a><a href="https://github.com/zhangbaijin/LVLMs-Saliency" target="_blank" rel="noopener">Code</a></span></div>
+          </li>
+          <li>
+            <p class="t">SoPE: Spherical Coordinate-Based Positional Embedding for Enhancing Spatial Perception of 3D LVLMs</p>
+            <p class="a">Koon-Ting Yip*, <b>Qiyan Zhao*</b>, et al.</p>
+            <div class="m"><span class="pill">CVPR 2026</span><span class="mini-links"><a href="https://arxiv.org/abs/2602.22716" target="_blank" rel="noopener">Paper</a></span></div>
+          </li>
+          <li>
+            <p class="t">MCA-LLaVA: Manhattan Causal Attention for Reducing Hallucination in Large Vision-Language Models</p>
+            <p class="a"><b>Qiyan Zhao*</b>, Xiaofeng Zhang*, et al.</p>
+            <div class="m"><span class="pill">ACM MM 2025</span><span class="mini-links"><a href="https://dl.acm.org/doi/pdf/10.1145/3746027.3755271" target="_blank" rel="noopener">Paper</a><a href="https://github.com/ErikZ719/MCA-LLaVA" target="_blank" rel="noopener">Code</a></span></div>
+          </li>
+        </ul>
+        <p class="footnote" style="margin-top:0.75rem">* equal contribution</p>
+      </section>
+
+      <section>
+        <div class="sec-head">
+          <h3><span class="idx">04</span>Service</h3>
+        </div>
+        <p class="plain">Reviewer for TPAMI, NeurIPS, ICML, ICLR, CVPR, ECCV, ACM MM, AAAI, and ACL Rolling Review.</p>
+      </section>
+
+    </div>
+    <footer class="site-footer col">© 2026 Qiyan Zhao · Last updated Oct 2026</footer>
+  </main>
+
 </div>
-
-          <nav>
-            <a href="#about">About Me</a>
-            <a href="#news">News</a>
-            <a href="#publications">Publications</a>
-            <a href="#services">Services</a>
-          </nav>
-        </div>
-
-        <div class="header-right">
-          <img src="images/touxiang.jpg" alt="Erik Li avatar" class="avatar">
-        </div>
-      </div>
-    </header>
-
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        I am a Ph.D. student at the Institute of Automation, Chinese Academy of Sciences, advised by <a href="https://people.ucas.edu.cn/~xuyaozhang?language=en" target="_blank">Prof. Xu-Yao Zhang</a>. I work on the </strong>mechanistic interpretability of large models and agents</strong>, treating internal-mechanism understanding as a first-class design lever rather than a post-hoc diagnostic. My central question is how the internal computations of foundation models give rise to reasoning---and when and why they fail---with the answers directly driving methods for reliable reasoning and reliable agents. I stress-test this programme in VLA and WAM embodied settings, aiming to move interpretable, reliable behaviour from paper to product.
-      </p>
-      <p>
-        </strong>Topics:</strong> Interpretable AI, Multimodal Reasoning, Self-Evolving Agents, Embodied Intelligence
-      </p>
-      <p>
-      Please feel free to reach out if you are interested in related topics.
-      <p>
-    </section>
-
-    <section id="news">
-      <h2>News</h2>
-  <div class="news-box">
-    <ul class="news-list">
-        <li><strong>2026.8</strong> — We have 1 paper accepted to EMNLP 2026. </li>
-        <li><strong>2026.6</strong> — We have 1 paper accepted to IROS 2026. </li>
-        <!-- <li><strong>2026.5</strong> — We have 1 paper accepted to Scientific Report. </li> -->
-        <li><strong>2026.4</strong> — We have 1 paper accepted to ICIC 2026 Oral. </li>
-        <li><strong>2026.4</strong> — We have 2 papers accepted to ACL 2026. </li>
-        <li><strong>2026.2</strong> — We have 1 paper accepted to CVPR 2026. </li>
-        <li><strong>2026.1</strong> — We have 1 paper accepted to ICRA 2026. </li>
-        <li><strong>2026.1</strong> — We have 2 paper including 1 oral accepted to ICLR 2026. </li>
-        <li><strong>2025.10</strong> — We have 1 paper accepted to ACM MM 2025. </li>
-        <li><strong>2025.9</strong> — We have 1 paper accepted to The Visual Computer. </li>
-        <li><strong>2025.6</strong> — We have 1 paper accepted to IJCNN 2025. </li>
-      </ul>
-  </div>
-    </section>
-
-<section id="publications">
-  <h2>Selected Publications</h2>
-
-  <div class="pub-list">
-    
-<!-- <div class="pub-item">
-      <div class="pub-image">
-        <img src="images/aaai.png" alt="C2RoPE paper thumbnail">
-      </div>
-      <div class="pub-content">
-        <div class="pub-title">Coalition-Aware Skill Reliability for Self-Evolving Agents</div>
-        <div class="pub-authors">
-          <strong>Qiyan Zhao</strong>, Xiaofeng Zhang, Liu Bo, Minda Chen, Wei Xiong, Jingyang Chen, Guanting Ye, Wenhao Yu, Xiaosong Yuan, Shijie Han, Da-Han Wang, Jianmin Ji, Fei Huang, Xu-Yao Zhang 
-        </div>
-        <div class="pub-venue">
-          <em>UR</em>
-          <a href="https://openreview.net/forum?id=mOz9jVYxsD" target="_blank">[Paper]</a>
-          <a href="https://github.com/ErikZ719/CoTA" target="_blank">[Code]</a>
-        </div>
-      </div>
-    </div> -->
-
-    
-      <div class="pub-item">
-      <div class="pub-image">
-        <img src="images/emnlp2026.png" alt="C2RoPE paper thumbnail">
-      </div>
-      <div class="pub-content">
-        <div class="pub-title">Context-Aware Cluster Decoding: Semantic Anchor-Driven Coherence in dMLLMs</div>
-        <div class="pub-authors">
-          Yikai Zhao, <strong>Qiyan Zhao</strong>,  Jiaquan Zhang, Xiaofeng Zhang, Xiaosong Yuan, Pengzhou Cheng
-        </div>
-        <div class="pub-venue">
-          <em>EMNLP 2026</em>
-          <a href="https://arxiv.org/abs/2608.22367" target="_blank">[Paper]</a>
-          <a href="https://github.com/zhaoyk-sysu/CACD-dMLLM" target="_blank">[Code]</a>
-        </div>
-      </div>
-    </div>
-    
-
-      <div class="pub-item">
-      <div class="pub-image">
-        <img src="images/cota.png" alt="C2RoPE paper thumbnail">
-      </div>
-      <div class="pub-content">
-        <div class="pub-title">Context Tokens are Anchors: Understanding the Repeat Curse in dMLLMs from an Information Flow Perspective</div>
-        <div class="pub-authors">
-          <strong>Qiyan Zhao</strong>, Xiaofeng Zhang, Shuochen Chang, Qianyu Chen, Xiaosong Yuan, Xuhang Chen, Luoqi Liu, Jiajun Zhang, Xu-Yao Zhang, Da-Han Wang
-        </div>
-        <div class="pub-venue">
-          <em>ICLR 2026</em>
-          <a href="https://openreview.net/forum?id=mOz9jVYxsD" target="_blank">[Paper]</a>
-          <a href="https://github.com/ErikZ719/CoTA" target="_blank">[Code]</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="pub-item">
-      <div class="pub-image">
-        <img src="images/mca.png" alt="C2RoPE paper thumbnail">
-      </div>
-      <div class="pub-content">
-        <div class="pub-title">MCA-LLaVA: Manhattan Causal Attention for Reducing Hallucination in Large Vision-Language Models</div>
-        <div class="pub-authors">
-        <strong>Qiyan Zhao</strong>, Xiaofeng Zhang, Yiheng Li, Yun Xing, Xiaosong Yuan, Feilong Tang, Sinan Fan, Xuhang Chen, Da-Han Wang, Xu-Yao Zhang
-        </div>
-        <div class="pub-venue">
-          <em>ACM MM 2025</em>
-          <a href="https://dl.acm.org/doi/pdf/10.1145/3746027.3755271" target="_blank">[Paper]</a>
-          <a href="https://github.com/ErikZ719/MCA-LLaVA" target="_blank">[Code]</a>
-        </div>
-      </div>
-    </div>
-
-      <div class="pub-item">
-      <div class="pub-image">
-        <img src="images/iclr.png" alt="C2RoPE paper thumbnail">
-      </div>
-      <div class="pub-content">
-        <div class="pub-title">Hallucination Begins Where Saliency Drops</div>
-        <div class="pub-authors">
-          Xiaofeng Zhang, Yuanchao Zhu, Chaochen Gu, Xiaosong Yuan, <strong>Qiyan Zhao</strong>, Jiawei Cao, Feilong Tang, Sinan Fan, Yaomin Shen, Chen Shen, Hao Tang
-        </div>
-        <div class="pub-venue">
-          <em>ICLR 2026 Oral</em>
-          <a href="https://arxiv.org/abs/2601.20279" target="_blank">[Paper]</a>
-          <a href="https://github.com/zhangbaijin/LVLMs-Saliency" target="_blank">[Code]</a>
-        </div>
-      </div>
-    </div>
-      
-    <div class="pub-item">
-      <div class="pub-image">
-        <img src="images/EDAR.png" alt="EDAR paper thumbnail">
-      </div>
-      <div class="pub-content">
-        <div class="pub-title">Fixing Semantic Blind Spots in Anchor Tokens of dMLLMs</div>
-        <div class="pub-authors">
-          Ruixuan Xu, Jiexi Xu, <strong>Qiyan Zhao</strong>, Xiaofeng Zhang
-        </div>
-        <div class="pub-venue">
-          <em>ACL 2026</em>
-          <a href="https://2026.aclweb.org/" target="_blank">[Paper]</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="pub-item">
-      <div class="pub-image">
-        <img src="images/tokenpenalty.png" alt="TokenPenalty paper thumbnail">
-      </div>
-      <div class="pub-content">
-        <div class="pub-title">TokenPenalty: Alleviating Attention Sinks and Positional Decay in LVLMs</div>
-        <div class="pub-authors">
-          Xiaofeng Zhang, Yuanchao Zhu, <strong>Qiyan Zhao</strong>, Xiaosong Yuan, Jiawei Cao, Xuhang Chen
-        </div>
-        <div class="pub-venue">
-          <em>ACL 2026</em>
-          <a href="https://2026.aclweb.org/" target="_blank">[Paper]</a>
-        </div>
-      </div>
-    </div>
-  
-    <div class="pub-item">
-      <div class="pub-image">
-        <img src="images/cvpr.jpg" alt="SoPE paper thumbnail">
-      </div>
-      <div class="pub-content">
-        <div class="pub-title">SoPE: Spherical Coordinate-Based Positional Embedding for Enhancing Spatial Perception of 3D LVLMs</div>
-        <div class="pub-authors">
-          Koon-Ting Yip, <strong>Qiyan Zhao</strong>, Wenhao Yu, Liangyu Yuan, Mingkai Li, Xiaofeng Zhang, Jianmin Ji, Yanyong Zhang, Qing Jiang, Ka-Veng Yuen
-        </div>
-        <div class="pub-venue">
-          <em>CVPR 2026</em>
-          <a href="https://arxiv.org/abs/2602.22716" target="_blank">[Paper]</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="pub-item">
-      <div class="pub-image">
-        <img src="images/icra.png" alt="C2RoPE paper thumbnail">
-      </div>
-      <div class="pub-content">
-        <div class="pub-title">C<sup>2</sup>ROPE: Causal Continuous Rotary Positional Encoding for 3D Large Multimodal Models Reasoning</div>
-        <div class="pub-authors">
-          Koon-Ting Yip, <strong>Qiyan Zhao</strong>, Wenhao Yu, Xiaofeng Zhang, Jianming Ji, Yanyong Zhang, Ka-Veng Yuen
-        </div>
-        <div class="pub-venue">
-          <em>ICRA 2026</em>
-          <a href="https://arxiv.org/abs/2602.10551" target="_blank">[Paper]</a>
-          <a href="https://github.com/KarnaYip/C2RoPE" target="_blank">[Code]</a>
-        </div>
-      </div>
-    </div>
-
-      <div class="pub-item">
-      <div class="pub-image">
-        <img src="images/iros26.png" alt="C2RoPE paper thumbnail">
-      </div>
-      <div class="pub-content">
-        <div class="pub-title">Embodied Chain-of-Thought Model via Interleaved Reasoning</div>
-        <div class="pub-authors">
-          Bo Liu, <strong>Qiyan Zhao</strong>, Liming Zhang, Yuhan Wang, Yong Liu
-        </div>
-        <div class="pub-venue">
-          <em>IROS 2026</em>
-          <a href="https://arxiv.org/abs/2602.10551" target="_blank">[Paper]</a>
-          <a href="https://github.com/KarnaYip/C2RoPE" target="_blank">[Code]</a>
-        </div>
-      </div>
-    </div>
-    
-    <!-- <div class="pub-item">
-      <div class="pub-image">
-        <img src="images/ijcnn.png" alt="C2RoPE paper thumbnail">
-      </div>
-      <div class="pub-content">
-        <div class="pub-title">Textmamba: Scene text detector with mamba</div>
-        <div class="pub-authors">
-          <strong>Qiyan Zhao</strong>, Yue Yan, Da-Han Wang
-        </div>
-        <div class="pub-venue">
-          <em>IJCNN 2025</em>
-          <a href="https://arxiv.org/pdf/2512.06657" target="_blank">[Paper]</a>
-          <a href="https://github.com/ErikZ719/TextMamba" target="_blank">[Code]</a>
-        </div>
-      </div>
-    </div>
-    
-    <div class="pub-item">
-      <div class="pub-image">
-        <img src="images/tvc.png" alt="C2RoPE paper thumbnail">
-      </div>
-      <div class="pub-content">
-        <div class="pub-title">Few-shot cross-modal text detection via CLIP</div>
-        <div class="pub-authors">
-         <strong>Qiyan Zhao</strong>, Xiaofeng Zhang, Tiange Zhang, Jiuze Li
-        </div>
-        <div class="pub-venue">
-          <em>The Visual Computer</em>
-          <a href="https://github.com/ErikZ719/TextCLIP" target="_blank">[Code]</a>
-        </div>
-      </div>
-    </div> -->
-    
-  </div>
-</section>
-
-    <section id="services">
-      <h2>Services</h2>
-      <ul>
-        <li>Invited Reviewer for: ICML, NeurIPS, CVPR, ICLR, ACM MM, ECCV</li>
-      </ul>
-    </section>
-
-    <footer>
-      © 2026 ErikZ
-    </footer>
-  </div>
+<script src="assets/site.js"></script>
 </body>
 </html>

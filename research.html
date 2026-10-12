@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research — Qiyan Zhao</title>
+  <meta name="author" content="Qiyan Zhao">
+  <meta name="description" content="Research overview: mechanistic diagnosis of multimodal models, reliable reasoning in training and inference, and reliable self-evolving and embodied agents.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="assets/style.css">
+  <script>(function(){var t;try{t=localStorage.getItem('theme')}catch(e){}if(t!=='light'&&t!=='dark'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}document.documentElement.setAttribute('data-theme',t)})();</script>
+</head>
+<body>
+<div class="shell">
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+      <img class="portrait" src="images/touxiang.jpg" alt="Portrait of Qiyan Zhao" width="148" height="148">
+      <div class="id">
+        <h1>Qiyan Zhao</h1>
+        <p class="role">Ph.D. Student</p>
+        <p class="affil">Institute of Automation,<br>Chinese Academy of Sciences</p>
+      </div>
+      <nav class="side-nav" aria-label="Main">
+        <a href="index.html"><span>01</span>Home</a>
+        <a href="research.html" aria-current="page"><span>02</span>Research</a>
+        <a href="publications.html"><span>03</span>Publications</a>
+        <a href="news.html"><span>04</span>News</a>
+      </nav>
+      <div class="side-links">
+        <a class="icon-btn" href="mailto:qiyanzhao618@gmail.com" aria-label="Email" title="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></a>
+        <a class="icon-btn" href="https://scholar.google.com/citations?user=lI7U-X8AAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></a>
+        <a class="icon-btn" href="https://github.com/ErikZ719" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg></a>
+        <button class="icon-btn theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode"><svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg><svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></button>
+      </div>
+      <p class="email-text">qiyanzhao618 [at] gmail.com</p>
+    </div>
+  </aside>
+
+  <main>
+    <div class="col-wide rise">
+
+      <!-- ============ Hero ============ -->
+      <header class="r-hero">
+        <p class="kicker">Research</p>
+        <h1>Reliable AI from the inside out</h1>
+        <p class="tagline">diagnose the mechanism → repair the failure → deploy with trust</p>
+        <p class="lead">I study how large multimodal models and agents compute internally, and why they fail. I use that understanding to build models that reason reliably, in training and at inference, and agents that act reliably in open, embodied environments.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="publications.html">View publications
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          <a class="btn" href="https://scholar.google.com/citations?user=lI7U-X8AAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+        </div>
+      </header>
+
+      <!-- ============ Pipeline diagram ============ -->
+      <figure class="pipeline" aria-label="Research pipeline: inputs, three stages (diagnose, repair, deploy), and outcomes">
+        <div class="pl-io">
+          <span class="pl-label">Inputs</span>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>Vision</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Language</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>3D space</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 9-3 3 3 3"/><path d="m9 5 3-3 3 3"/><path d="m15 19-3 3-3-3"/><path d="m19 9 3 3-3 3"/><path d="M2 12h20"/><path d="M12 2v20"/></svg>Action</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z"/></svg>Skills</li>
+          </ul>
+        </div>
+        <svg class="pl-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+        <div class="pl-stages">
+          <div class="pl-stage t1"><span class="pl-n">01</span><b>Diagnose</b><span>Mechanistic analysis of where and why models fail</span></div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          <div class="pl-stage t2"><span class="pl-n">02</span><b>Repair</b><span>Principled fixes in both training and inference</span></div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          <div class="pl-stage t3"><span class="pl-n">03</span><b>Deploy</b><span>Reliable self-evolving and embodied agents</span></div>
+        </div>
+        <svg class="pl-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+        <div class="pl-io">
+          <span class="pl-label">Outcomes</span>
+          <ul>
+            <li>3D spatial perception</li>
+            <li>VLA &amp; world-action models</li>
+            <li>Self-evolving agents</li>
+          </ul>
+        </div>
+      </figure>
+
+      <!-- ============ Research directions ============ -->
+      <section class="r-rows">
+
+        <article class="r-row">
+          <div>
+            <p class="kicker">01 · Diagnose</p>
+            <h2>Mechanistic Diagnosis of Multimodal Models</h2>
+            <p class="desc">Reliability starts with knowing where things break. I analyze information flow, attention, and saliency inside vision–language models and diffusion MLLMs to explain failures such as hallucination, attention sinks, and the repetition curse under cache acceleration.</p>
+            <ul class="tags"><li>information flow</li><li>attention sinks</li><li>hallucination</li><li>dMLLMs</li></ul>
+            <div class="selected">
+              <p class="label">Selected work</p>
+              <ul>
+                <li><a href="https://openreview.net/forum?id=mOz9jVYxsD" target="_blank" rel="noopener">Context tokens are anchors: understanding the repeat curse in dMLLMs from an information-flow perspective</a><span class="v">ICLR'26</span></li>
+                <li><a href="https://arxiv.org/abs/2601.20279" target="_blank" rel="noopener">Hallucination begins where saliency drops</a><span class="v">ICLR'26 Oral</span></li>
+                <li><a href="https://aclanthology.org/2026.findings-acl.628/" target="_blank" rel="noopener">TokenPenalty: alleviating attention sinks and positional decay in LVLMs</a><span class="v">ACL'26 Findings</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="r-figs">
+            <figure><img src="images/cota.png" alt="Context tokens as anchors in diffusion MLLMs" loading="lazy"><figcaption>Context tokens act as anchors in dMLLMs</figcaption></figure>
+            <figure><img src="images/iclr.png" alt="Hallucination begins where saliency drops" loading="lazy"><figcaption>Hallucination begins where saliency drops</figcaption></figure>
+          </div>
+        </article>
+
+        <article class="r-row">
+          <div>
+            <p class="kicker">02 · Repair</p>
+            <h2>Reliable Reasoning, in Training and Inference</h2>
+            <p class="desc">Each diagnosis becomes a principled fix. When models learn, I redesign positional encodings and attention structure so they keep visual and spatial grounding. When they generate, I design decoding and token-level strategies that keep outputs coherent and faithful.</p>
+            <ul class="tags"><li>training-time priors</li><li>inference-time intervention</li><li>positional encoding</li><li>decoding</li></ul>
+            <div class="selected">
+              <p class="label">Selected work</p>
+              <ul>
+                <li><a href="https://dl.acm.org/doi/pdf/10.1145/3746027.3755271" target="_blank" rel="noopener">MCA-LLaVA: Manhattan causal attention for reducing hallucination in LVLMs</a><span class="v">ACM MM'25</span></li>
+                <li><a href="https://arxiv.org/abs/2602.22716" target="_blank" rel="noopener">SoPE: spherical coordinate-based positional embedding for 3D LVLMs</a><span class="v">CVPR'26</span></li>
+                <li><a href="https://arxiv.org/abs/2608.22367" target="_blank" rel="noopener">Context-aware cluster decoding: semantic anchor-driven coherence in dMLLMs</a><span class="v">EMNLP'26</span></li>
+                <li><a href="https://aclanthology.org/2026.findings-acl.966/" target="_blank" rel="noopener">Fixing semantic blind spots in anchor tokens of dMLLMs</a><span class="v">ACL'26 Findings</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="r-figs">
+            <figure><img src="images/mca.png" alt="Manhattan causal attention" loading="lazy"><figcaption>Manhattan causal attention against positional decay</figcaption></figure>
+            <figure><img src="images/emnlp2026.png" alt="Anchor-driven cluster decoding" loading="lazy"><figcaption>Anchor-driven cluster decoding</figcaption></figure>
+          </div>
+        </article>
+
+        <article class="r-row">
+          <div>
+            <p class="kicker">03 · Deploy</p>
+            <h2>Reliable Agents in Open Environments</h2>
+            <p class="desc">Agents that improve themselves also need to be checked. I study when the skills a self-evolving agent accumulates actually help, exposing failures such as coalition pollution and cross-domain utility reversal. I also study how embodied models can interleave reasoning with action.</p>
+            <ul class="tags"><li>self-evolution</li><li>skill reliability</li><li>embodied reasoning</li></ul>
+            <div class="selected">
+              <p class="label">Selected work</p>
+              <ul>
+                <li><a href="https://arxiv.org/abs/2608.22610" target="_blank" rel="noopener">Coalition-aware skill reliability for self-evolving agents</a><span class="v">Preprint</span></li>
+                <li>Embodied chain-of-thought model via interleaved reasoning<span class="v">IROS'26 Oral</span></li>
+                <li><a href="https://arxiv.org/abs/2602.10551" target="_blank" rel="noopener">C²RoPE: causal continuous rotary positional encoding for 3D LMM reasoning</a><span class="v">ICRA'26</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="r-figs">
+            <figure><img src="images/aaai.png" alt="Coalition-aware skill selection" loading="lazy"><figcaption>Auditing skill coalitions in self-evolving agents</figcaption></figure>
+            <figure><img src="images/iros26.png" alt="Interleaved embodied chain-of-thought" loading="lazy"><figcaption>Interleaved embodied reasoning</figcaption></figure>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- ============ Embodied testbed ============ -->
+      <section class="testbed">
+        <div class="sec-head">
+          <h3><span class="idx">↳</span>Embodied Testbed</h3>
+        </div>
+        <p class="lead">In embodied settings, reliability is more than a benchmark number. A hallucinated object or a misplaced coordinate becomes a failed action, which makes these settings the proving ground for everything above.</p>
+
+        <div class="e-grid">
+          <article class="e-card">
+            <img src="images/cvpr.jpg" alt="SoPE overview" loading="lazy">
+            <div class="body">
+              <p class="kicker">Spatial perception</p>
+              <h3>3D-aware multimodal models</h3>
+              <p>Positional encodings that respect 3D geometry and causal order, so that models know where things are.</p>
+              <div class="selected">
+                <ul>
+                  <li><a href="https://arxiv.org/abs/2602.22716" target="_blank" rel="noopener">SoPE</a><span class="v">CVPR'26</span></li>
+                  <li><a href="https://arxiv.org/abs/2602.10551" target="_blank" rel="noopener">C²RoPE</a><span class="v">ICRA'26</span></li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="e-card">
+            <img src="images/iros26.png" alt="Embodied chain-of-thought overview" loading="lazy">
+            <div class="body">
+              <p class="kicker">Embodied reasoning</p>
+              <h3>Thinking while acting</h3>
+              <p>Interleaving chain-of-thought with perception and action for more reliable robot decision making.</p>
+              <div class="selected">
+                <ul>
+                  <li>Embodied CoT via interleaved reasoning<span class="v">IROS'26 Oral</span></li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="e-card">
+            <img src="images/aaai.png" alt="Coalition-aware skill reliability overview" loading="lazy">
+            <div class="body">
+              <p class="kicker">Open-world self-evolution</p>
+              <h3>Self-evolving embodied agents</h3>
+              <p>Agents that keep improving in open environments while their skills stay verifiably useful. This line extends to VLA and world-action models.</p>
+              <div class="selected">
+                <ul>
+                  <li><a href="https://arxiv.org/abs/2608.22610" target="_blank" rel="noopener">Coalition-aware skill reliability</a><span class="v">Preprint</span></li>
+                </ul>
+              </div>
+              <span class="pill pill-ghost">Ongoing · VLA &amp; WAM</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+    </div>
+    <footer class="site-footer col-wide">© 2026 Qiyan Zhao · Last updated Oct 2026</footer>
+  </main>
+
+</div>
+<script src="assets/site.js"></script>
+</body>
+</html>
